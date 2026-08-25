@@ -21,9 +21,9 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 body {
   background: var(--bg);
@@ -181,6 +181,30 @@ em {
 .btn--small { padding: 10px 22px; font-size: 0.88rem; }
 .btn__arrow { transition: transform 0.3s var(--ease); }
 .btn:hover .btn__arrow { transform: translateX(4px); }
+.btn:active { transform: scale(0.97); }
+
+/* ── Barre d'action collante (mobile) ────────────── */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  left: 12px; right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 90;
+  align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #8b7bff, #6e56cf);
+  color: #fff;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 10px 36px rgba(110, 86, 207, 0.5);
+  transition: transform 0.35s var(--ease), opacity 0.35s;
+}
+.sticky-cta.is-hidden {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* ── Typo commune sections ───────────────────────── */
 .section { padding-block: clamp(80px, 12vh, 140px); }
@@ -775,7 +799,7 @@ em {
   display: block;
   font-family: var(--font-display);
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: 400;
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
   margin-bottom: 18px;
@@ -1044,12 +1068,71 @@ em {
 
 @media (max-width: 680px) {
   body { font-size: 16px; }
+  body:has(.sticky-cta) { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+
+  /* ── Navigation : cible tactile 48px ── */
   .nav__links { display: none; }
   .nav .btn { display: none; }
-  .nav__burger { display: flex; }
+  .nav__inner { padding-block: 10px; }
+  .nav__burger {
+    display: flex;
+    align-items: center; justify-content: center;
+    width: 48px; height: 48px;
+    margin-right: -10px;
+  }
+  .mobile-menu a { padding: 10px 20px; }
+
+  /* ── Mise en page : une colonne, respiration réduite ── */
+  .section { padding-block: 64px; }
   .bento, .quotes, .pricing, .steps, .hire-steps, .included, .offscreen { grid-template-columns: 1fr; }
   .bento__card--large { grid-column: span 1; }
-  .contact-form { padding: 28px 22px; }
+  .bento__card, .price-card, .fit__card { padding: 28px 22px; }
+  .contact-form { padding: 28px 20px; }
   .contact-form__row { grid-template-columns: 1fr; }
-  .hero__cta .btn { width: 100%; justify-content: center; }
+
+  /* Les retours à la ligne forcés sont pensés pour desktop */
+  .hero__title br, .section__title br, .cta__title br { display: none; }
+  .hero { padding-top: 104px; padding-bottom: 60px; min-height: 92svh; }
+  .hero__scroll-hint { display: none; }
+
+  /* ── Boutons & liens : minimum 48px, pleine largeur ── */
+  .btn { min-height: 48px; justify-content: center; }
+  .btn--large { min-height: 56px; }
+  .btn--small { padding: 12px 22px; }
+  .hero__cta .btn, .price-card .btn, .contact-form .btn { width: 100%; }
+  .case__cta {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 48px;
+    border: 1px solid rgba(139, 123, 255, 0.4);
+    border-radius: 100px;
+    background: var(--accent-soft);
+  }
+  .faq__item summary { padding-block: 18px; min-height: 56px; display: flex; align-items: center; }
+  .footer__links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .sticky-cta { display: flex; }
+
+  /* ── Formulaires : 16px mini, sinon iOS zoome au focus ── */
+  .contact-form input, .contact-form textarea { font-size: 16px; padding: 15px 16px; }
+
+  /* ── Portfolio : métriques en rangée compacte ── */
+  .case__metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .case__metrics span { font-size: 1.3rem; }
+  .case__metrics small { font-size: 0.76rem; }
+  .case__visual { min-height: 220px; padding: 20px; }
+
+  /* ── Vitesse : effets allégés pour GPU mobile ── */
+  .grain { animation: none; opacity: 0.025; inset: 0; }
+  .aurora { filter: blur(46px); opacity: 0.4; }
+  .aurora--3 { display: none; }
+  .nav.is-scrolled { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .contact-form { backdrop-filter: none; }
+  .case__browser { transform: none; }
+  .price-card--featured { box-shadow: 0 14px 40px rgba(110, 86, 207, 0.18); }
+  .btn--primary { box-shadow: 0 6px 20px var(--glow); }
+
+  /* Le hors-écran n'est rendu qu'à l'approche du viewport */
+  main > .section:not(:first-child) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 720px;
+  }
 }

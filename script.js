@@ -141,6 +141,21 @@ if (!prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
   });
 }
 
+/* ── Barre d'action collante (mobile) : s'efface quand
+     la section de contact qu'elle vise est à l'écran ── */
+const stickyCta = document.getElementById("stickyCta");
+if (stickyCta) {
+  const watched = document.querySelector(stickyCta.dataset.watch || "#contact");
+  if (watched) {
+    new IntersectionObserver(
+      (entries) => {
+        stickyCta.classList.toggle("is-hidden", entries[0].isIntersecting);
+      },
+      { threshold: 0.15 }
+    ).observe(watched);
+  }
+}
+
 /* ── Formulaire : ouvre le client mail avec un message pré-rempli.
      Pour un vrai backend, remplacer par Formspree/Resend :
      action="https://formspree.io/f/VOTRE_ID" method="POST" et
