@@ -145,12 +145,15 @@ if (!prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
      Pour un vrai backend, remplacer par Formspree/Resend :
      action="https://formspree.io/f/VOTRE_ID" method="POST" et
      supprimer ce handler. ── */
-document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const subject = encodeURIComponent("Demande d'appel découverte — " + data.get("nom"));
-  const body = encodeURIComponent(
-    `Nom : ${data.get("nom")}\nEmail : ${data.get("email")}\n\nProjet :\n${data.get("message")}`
-  );
-  window.location.href = `mailto:david@ribeiro-campelo.com?subject=${subject}&body=${body}`;
-});
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const subject = encodeURIComponent("Demande d'appel découverte — " + data.get("nom"));
+    const body = encodeURIComponent(
+      `Nom : ${data.get("nom")}\nEmail : ${data.get("email")}\n\nProjet :\n${data.get("message")}`
+    );
+    window.location.href = `mailto:david@ribeiro-campelo.com?subject=${subject}&body=${body}`;
+  });
+}
