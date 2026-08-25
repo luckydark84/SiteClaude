@@ -655,6 +655,73 @@ em {
   font-size: 0.9rem;
 }
 
+/* ── Page À propos : narration ───────────────────── */
+.chapter { margin-bottom: clamp(48px, 8vh, 80px); }
+.chapter__num {
+  display: inline-block;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(139, 123, 255, 0.35);
+  background: var(--accent-soft);
+  padding: 6px 14px; border-radius: 100px;
+  margin-bottom: 20px;
+}
+.chapter__title {
+  font-family: var(--font-display);
+  font-weight: 460;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.chapter p {
+  color: var(--text-dim);
+  font-size: 1.06rem;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.chapter strong { color: var(--text); }
+.pullquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 420;
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text);
+  padding: clamp(32px, 5vh, 52px) clamp(20px, 4vw, 60px);
+  margin-bottom: clamp(48px, 8vh, 80px);
+  border-block: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at center, rgba(110, 86, 207, 0.1), transparent 70%);
+}
+.promise { padding: 24px 26px; }
+.promise__title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.promise__body { color: var(--text-dim); font-size: 0.97rem; }
+.offscreen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 44px;
+}
+.offscreen__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 26px 22px;
+  transition: border-color 0.3s, transform 0.3s var(--ease);
+}
+.offscreen__card:hover {
+  border-color: rgba(139, 123, 255, 0.35);
+  transform: translateY(-4px);
+}
+.offscreen__emoji { font-size: 1.8rem; display: block; margin-bottom: 14px; }
+.offscreen__card p { color: var(--text-dim); font-size: 0.93rem; line-height: 1.6; }
+
 /* ── Étapes d'embauche (CTA) ─────────────────────── */
 .hire-steps {
   list-style: none;
@@ -965,6 +1032,7 @@ em {
   .stats__grid { grid-template-columns: 1fr 1fr; gap: 40px 20px; }
   .price-card--featured { transform: none; }
   .included { grid-template-columns: 1fr 1fr; }
+  .offscreen { grid-template-columns: 1fr 1fr; }
   .steps--service { grid-template-columns: 1fr; }
   .fit { grid-template-columns: 1fr; }
   .case { grid-template-columns: 1fr; gap: 28px; }
@@ -979,7 +1047,7 @@ em {
   .nav__links { display: none; }
   .nav .btn { display: none; }
   .nav__burger { display: flex; }
-  .bento, .quotes, .pricing, .steps, .hire-steps, .included { grid-template-columns: 1fr; }
+  .bento, .quotes, .pricing, .steps, .hire-steps, .included, .offscreen { grid-template-columns: 1fr; }
   .bento__card--large { grid-column: span 1; }
   .contact-form { padding: 28px 22px; }
   .contact-form__row { grid-template-columns: 1fr; }

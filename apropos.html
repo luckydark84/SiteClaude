@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — David Ribeiro Campelo, développeur web IA</title>
+  <meta name="description" content="Qui est derrière votre futur site ? L'histoire de David Ribeiro Campelo : dix ans de code, un parti pris pour les indépendants, et l'IA comme accélérateur — jamais comme excuse.">
+  <meta property="og:title" content="À propos — David Ribeiro Campelo">
+  <meta property="og:description" content="La personne qui répond à votre premier message est celle qui code votre site. Voici pourquoi ça change tout.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVIGATION ══════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">D<span class="accent">◆</span>R</a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#histoire">Mon histoire</a>
+        <a href="#principes">Mes principes</a>
+        <a href="#horsecran">Hors écran</a>
+        <a href="index.html#realisations">Portfolio</a>
+        <a href="index.html#offres">Offres</a>
+      </nav>
+      <a href="#travailler" class="btn btn--small btn--primary magnetic">Travailler avec moi</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#histoire">Mon histoire</a>
+    <a href="#principes">Mes principes</a>
+    <a href="#horsecran">Hors écran</a>
+    <a href="index.html#realisations">Portfolio</a>
+    <a href="index.html#offres">Offres</a>
+    <a href="#travailler" class="btn btn--primary">Travailler avec moi</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ══════════════ OUVERTURE ══════════════ -->
+    <section class="hero hero--service">
+      <div class="hero__aurora" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--3"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal">À propos — 2 minutes de lecture</p>
+        <h1 class="hero__title reveal">
+          Les pages « À propos » parlent<br>
+          de passion. Celle-ci va parler<br>
+          de <em>ce que je vous dois.</em>
+        </h1>
+        <p class="hero__sub reveal">
+          Je m'appelle <strong>David Ribeiro Campelo</strong>. Quand vous m'écrivez,
+          c'est moi qui réponds. Quand on s'appelle, c'est moi qui écoute. Quand votre
+          site se construit, c'est moi qui le code. Cette page existe pour une seule
+          raison : que vous sachiez exactement à qui vous confiez votre image.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════ L'HISTOIRE ══════════════ -->
+    <section class="section" id="histoire">
+      <div class="container container--narrow">
+
+        <article class="chapter reveal">
+          <span class="chapter__num">Chapitre 1</span>
+          <h2 class="chapter__title">Le déclic : les meilleurs artisans avaient les pires sites.</h2>
+          <p>
+            J'ai grandi entouré de gens qui travaillaient de leurs mains et ne parlaient
+            jamais d'eux — le travail devait parler tout seul. Des années plus tard,
+            devenu développeur, j'ai retrouvé exactement les mêmes personnes parmi mes
+            premiers clients : des indépendants excellents dans leur métier… et invisibles
+            en ligne. Le plombier irréprochable avec une page datée de 2011. La thérapeute
+            complète de bouche-à-oreille, introuvable sur Google.
+          </p>
+          <p>
+            C'est là que j'ai compris une chose qui ne m'a plus quitté :
+            <strong>sur internet, ce n'est pas le meilleur qui gagne, c'est le plus
+            crédible.</strong> Et la crédibilité, ça se construit. C'est un métier.
+            Le mien.
+          </p>
+        </article>
+
+        <blockquote class="pullquote reveal">
+          « Sur internet, ce n'est pas le meilleur qui gagne.
+          C'est le plus crédible. Mon métier, c'est que ce soit
+          enfin la même personne. »
+        </blockquote>
+
+        <article class="chapter reveal">
+          <span class="chapter__num">Chapitre 2</span>
+          <h2 class="chapter__title">Dix ans de code, et une frustration qui grandit.</h2>
+          <p>
+            Pendant plus de dix ans, j'ai construit des sites — en agence, en équipe,
+            puis en solo. Et j'ai vu l'envers du décor : des devis à 10 000 € gonflés
+            par des réunions, des sites livrés en six mois parce que le projet passait
+            entre cinq personnes, des clients qui n'osaient plus poser de questions de
+            peur de paraître idiots.
+          </p>
+          <p>
+            Les indépendants, eux, restaient coincés entre deux mauvaises options :
+            l'agence hors budget, ou le template à 200 € qui crie « site pas cher »
+            dès la première seconde. Personne ne construisait pour eux la troisième
+            voie : <strong>la qualité d'agence, au rythme et au prix d'un indépendant.</strong>
+          </p>
+        </article>
+
+        <article class="chapter reveal">
+          <span class="chapter__num">Chapitre 3</span>
+          <h2 class="chapter__title">Puis l'IA est arrivée. J'ai décidé d'en faire votre avantage.</h2>
+          <p>
+            Quand l'IA a bouleversé mon métier, j'avais deux options : la craindre,
+            ou la maîtriser mieux que tout le monde. J'ai choisi la seconde — pas pour
+            produire des sites à la chaîne, mais pour faire sauter le seul verrou qui
+            empêchait la troisième voie d'exister : <strong>le temps.</strong>
+          </p>
+          <p>
+            Aujourd'hui, l'IA abat pour moi le travail répétitif — le code standard,
+            les premières versions de textes, les tests. Et moi, je réinvestis chaque
+            heure gagnée là où aucune machine ne me remplacera : comprendre votre
+            métier, trouver l'angle qui vous distingue, et polir chaque détail visible
+            de votre site. C'est ça, l'équation : <strong>l'IA fait la vitesse,
+            je fais la qualité, vous gagnez les deux.</strong>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ MES PRINCIPES ══════════════ -->
+    <section class="section stats" id="principes">
+      <div class="container container--narrow">
+        <p class="eyebrow reveal">Ce que ça change pour vous</p>
+        <h2 class="section__title reveal">Trois promesses, <em>écrites noir sur blanc.</em></h2>
+        <div class="faq reveal" style="margin-top: 32px;">
+          <div class="faq__item promise">
+            <p class="promise__title">Vous ne parlerez jamais à un intermédiaire.</p>
+            <p class="promise__body">Pas de commercial, pas de chef de projet, pas de « je transmets à l'équipe technique ». La personne qui comprend votre besoin est celle qui le code — c'est le seul moyen que rien ne se perde en route.</p>
+          </div>
+          <div class="faq__item promise">
+            <p class="promise__title">Je vous dirai la vérité, même quand elle ne m'arrange pas.</p>
+            <p class="promise__body">Si une fonctionnalité ne sert pas vos clients, je vous le dis avant de la facturer. Si une offre moins chère vous suffit, je vous oriente vers elle. Un client bien conseillé revient ; un client sur-vendu ne revient jamais.</p>
+          </div>
+          <div class="faq__item promise">
+            <p class="promise__title">Votre site vous appartiendra, entièrement.</p>
+            <p class="promise__body">Code, domaine, contenus, accès : tout est à vous, dès le premier jour. Je veux que vous restiez parce que le travail est bon — jamais parce que partir serait compliqué.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ HORS ÉCRAN ══════════════ -->
+    <section class="section" id="horsecran">
+      <div class="container">
+        <p class="eyebrow reveal">Hors écran</p>
+        <h2 class="section__title reveal">Parce qu'on travaille mieux<br>avec <em>quelqu'un qu'on connaît.</em></h2>
+        <div class="offscreen reveal">
+          <div class="offscreen__card">
+            <span class="offscreen__emoji" aria-hidden="true">☕</span>
+            <p>Je réfléchis mieux en marchant qu'assis. Les meilleures idées de mes clients sont nées entre deux rues, pas devant l'écran.</p>
+          </div>
+          <div class="offscreen__card">
+            <span class="offscreen__emoji" aria-hidden="true">📚</span>
+            <p>Je lis plus de livres sur la psychologie de la décision que sur le code. Votre site convainc des humains, pas des machines.</p>
+          </div>
+          <div class="offscreen__card">
+            <span class="offscreen__emoji" aria-hidden="true">🔧</span>
+            <p>Fils et petit-fils de gens de métier : j'ai le respect du travail bien fait chevillé au corps — et une tendresse particulière pour les artisans.</p>
+          </div>
+          <div class="offscreen__card">
+            <span class="offscreen__emoji" aria-hidden="true">📵</span>
+            <p>Je ne réponds pas aux emails le dimanche. Vous non plus, j'espère. Les indépendants qui durent sont ceux qui débranchent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CTA ══════════════ -->
+    <section class="section cta" id="travailler">
+      <div class="cta__aurora" aria-hidden="true"></div>
+      <div class="container container--narrow">
+        <h2 class="cta__title reveal">Maintenant vous me connaissez.<br><em>À mon tour.</em></h2>
+        <p class="section__lead reveal">
+          Racontez-moi votre activité en une phrase — je vous rappelle sous 48 h
+          pour 30 minutes de conversation. Pas de pitch, pas de jargon : juste
+          comprendre votre métier et voir si je peux le servir.
+        </p>
+        <div class="hero__cta reveal" style="justify-content: center;">
+          <a href="index.html#contact" class="btn btn--primary btn--large magnetic">
+            Démarrer la conversation <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="index.html#realisations" class="btn btn--ghost btn--large magnetic">D'abord voir mon travail</a>
+        </div>
+        <p class="hero__note reveal" style="text-align: center; margin-top: 20px;">
+          Ou directement par email : <a href="mailto:david@ribeiro-campelo.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">david@ribeiro-campelo.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__logo">D<span class="accent">◆</span>R — Sites web premium propulsés par l'IA</p>
+      <nav class="footer__links" aria-label="Liens de pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="mailto:david@ribeiro-campelo.com">david@ribeiro-campelo.com</a>
+        <a href="#top">Retour en haut ↑</a>
+      </nav>
+      <p class="footer__legal">© 2026 David Ribeiro Campelo. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

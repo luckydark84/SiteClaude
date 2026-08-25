@@ -23,6 +23,10 @@ Compatible tel quel avec GitHub Pages, Vercel, Netlify ou Cloudflare Pages
   de vrais projets (`.case__visual`), et les métriques par vos vrais chiffres.
 - **À propos** : remplacer le monogramme par une vraie photo (`.about__photo`)
   et ajuster les années d'expérience / faits chiffrés à votre parcours réel.
+- **Page apropos.html** : le récit (chapitres 1 à 3) et les cartes « Hors
+  écran » sont une trame narrative à relire et ajuster à votre vraie
+  histoire — notamment l'origine familiale, le parcours en agence et les
+  détails personnels, qui doivent être authentiques avant publication.
 - **Formulaire de contact** : par défaut il ouvre le client mail
   (`mailto:`). Pour recevoir les messages sans dépendre du client mail du
   visiteur, brancher Formspree/Resend — voir le commentaire dans `script.js`.
