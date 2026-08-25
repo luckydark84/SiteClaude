@@ -19,8 +19,10 @@ Compatible tel quel avec GitHub Pages, Vercel, Netlify ou Cloudflare Pages
 
 - **Témoignages et résultats chiffrés** : les exemples fournis sont des
   placeholders — remplacez-les par de vrais retours clients avant publication.
-- **Réalisations** : remplacer les visuels génériques par des captures de vrais
-  projets (`.work__visual`).
+- **Portfolio** : remplacer les maquettes navigateur génériques par des captures
+  de vrais projets (`.case__visual`), et les métriques par vos vrais chiffres.
+- **À propos** : remplacer le monogramme par une vraie photo (`.about__photo`)
+  et ajuster les années d'expérience / faits chiffrés à votre parcours réel.
 - **Formulaire de contact** : par défaut il ouvre le client mail
   (`mailto:`). Pour recevoir les messages sans dépendre du client mail du
   visiteur, brancher Formspree/Resend — voir le commentaire dans `script.js`.

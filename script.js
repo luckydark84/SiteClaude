@@ -126,9 +126,9 @@ document.querySelectorAll(".bento__card").forEach((card) => {
   });
 });
 
-/* ── Tilt 3D léger sur les cartes projets ── */
+/* ── Tilt 3D léger sur les visuels du portfolio ── */
 if (!prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
-  document.querySelectorAll(".work").forEach((card) => {
+  document.querySelectorAll(".case__visual").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const r = card.getBoundingClientRect();
       const rx = ((e.clientY - r.top) / r.height - 0.5) * -5;
