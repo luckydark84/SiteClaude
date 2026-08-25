@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Ribeiro — Sites web premium propulsés par l'IA</title>
+  <meta name="description" content="Développeur freelance. Je conçois des sites web premium, rapides et intelligents grâce à l'IA — livrés en 2 à 3 semaines. Réservez votre appel gratuit.">
+  <meta property="og:title" content="David Ribeiro — Sites web premium propulsés par l'IA">
+  <meta property="og:description" content="Des sites qui vendent pendant que vous dormez. Livrés en 2 à 3 semaines grâce à l'IA.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════════════ NAVIGATION ══════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">D<span class="accent">◆</span>R</a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#process">Méthode</a>
+        <a href="#offres">Offres</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn--small btn--primary magnetic">Réserver un appel</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#process">Méthode</a>
+    <a href="#offres">Offres</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn btn--primary">Réserver un appel</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ══════════════ 1. HERO ══════════════ -->
+    <section class="hero">
+      <div class="hero__aurora" aria-hidden="true">
+        <div class="aurora aurora--1"></div>
+        <div class="aurora aurora--2"></div>
+        <div class="aurora aurora--3"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Développeur freelance — 2 places disponibles ce trimestre
+        </p>
+        <h1 class="hero__title reveal">
+          Votre site web devrait <em>vendre</em><br>
+          pendant que vous dormez.
+        </h1>
+        <p class="hero__sub reveal">
+          Je conçois des sites premium, ultra-rapides et intelligents pour les entreprises
+          qui refusent de ressembler à leurs concurrents. Grâce à l'IA, je livre en
+          <strong>2 à 3 semaines</strong> ce que les agences facturent 3 mois.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#contact" class="btn btn--primary btn--large magnetic">
+            Réserver mon appel gratuit
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#realisations" class="btn btn--ghost btn--large magnetic">Voir mes réalisations</a>
+        </div>
+        <p class="hero__note reveal">30 minutes. Sans engagement. Vous repartez avec un plan d'action, même si on ne travaille pas ensemble.</p>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- ══════════════ 2. BARRE DE PREUVE ══════════════ -->
+    <section class="proofbar">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Next.js</span><i>◆</i><span>React</span><i>◆</i><span>Claude&nbsp;AI</span><i>◆</i>
+          <span>Tailwind</span><i>◆</i><span>Shopify</span><i>◆</i><span>WordPress</span><i>◆</i>
+          <span>Node.js</span><i>◆</i><span>Vercel</span><i>◆</i><span>Stripe</span><i>◆</i>
+          <span>Next.js</span><i>◆</i><span>React</span><i>◆</i><span>Claude&nbsp;AI</span><i>◆</i>
+          <span>Tailwind</span><i>◆</i><span>Shopify</span><i>◆</i><span>WordPress</span><i>◆</i>
+          <span>Node.js</span><i>◆</i><span>Vercel</span><i>◆</i><span>Stripe</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 3. PROBLÈME / PROMESSE ══════════════ -->
+    <section class="section problem">
+      <div class="container container--narrow">
+        <h2 class="section__title reveal">
+          Un site lent, daté ou invisible sur Google<br>
+          vous <em>coûte des clients chaque jour.</em>
+        </h2>
+        <p class="section__lead reveal">
+          Vos visiteurs décident en <strong>3 secondes</strong> si vous êtes crédible.
+          Mon travail : faire de votre site votre meilleur commercial — celui qui ne prend
+          jamais de vacances, répond en une seconde et convertit les curieux en clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════ 4. SERVICES (BENTO) ══════════════ -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow reveal">Ce que je fais</p>
+        <h2 class="section__title reveal">Des services pensés pour <em>votre chiffre d'affaires</em>, pas pour la technique.</h2>
+        <div class="bento">
+          <article class="bento__card bento__card--large tilt reveal">
+            <div class="bento__icon" aria-hidden="true">◇</div>
+            <h3>Sites vitrines premium</h3>
+            <p>Un site sur-mesure qui inspire confiance dès la première seconde : design distinctif, animations soignées, 100/100 en performance. Fini le template que vos concurrents utilisent aussi.</p>
+            <span class="bento__tag">Le plus demandé</span>
+          </article>
+          <article class="bento__card tilt reveal">
+            <div class="bento__icon" aria-hidden="true">◈</div>
+            <h3>E-commerce qui convertit</h3>
+            <p>Boutiques Shopify ou sur-mesure optimisées pour l'achat : tunnel fluide, paiement en 2 clics, fiches produits générées par IA.</p>
+          </article>
+          <article class="bento__card tilt reveal">
+            <div class="bento__icon" aria-hidden="true">◆</div>
+            <h3>IA intégrée à votre site</h3>
+            <p>Chatbot qui répond à vos clients 24/7, contenus SEO générés et validés, devis automatisés. Votre site travaille, vous encaissez.</p>
+          </article>
+          <article class="bento__card tilt reveal">
+            <div class="bento__icon" aria-hidden="true">◉</div>
+            <h3>Refonte &amp; SEO</h3>
+            <p>Votre site actuel modernisé sans perdre votre référencement — avec un plan SEO concret pour être trouvé par ceux qui vous cherchent.</p>
+          </article>
+          <article class="bento__card tilt reveal">
+            <div class="bento__icon" aria-hidden="true">◎</div>
+            <h3>Maintenance sereine</h3>
+            <p>Mises à jour, sauvegardes, sécurité, petites évolutions : je veille sur votre site pour que vous n'y pensiez plus jamais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 5. RÉSULTATS / CHIFFRES ══════════════ -->
+    <section class="section stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <span class="stat__number" data-count="21" data-suffix=" jours">0</span>
+            <span class="stat__label">Délai moyen de livraison</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__number" data-count="100" data-suffix="/100">0</span>
+            <span class="stat__label">Score de performance Google visé</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__number" data-count="40" data-prefix="+" data-suffix="%">0</span>
+            <span class="stat__label">De conversion en moyenne après refonte</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__number" data-count="24" data-suffix="/7">0</span>
+            <span class="stat__label">Votre site vend, même la nuit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 6. RÉALISATIONS ══════════════ -->
+    <section class="section" id="realisations">
+      <div class="container">
+        <p class="eyebrow reveal">Réalisations</p>
+        <h2 class="section__title reveal">Des projets qui parlent <em>à votre place.</em></h2>
+        <div class="works">
+          <a href="#contact" class="work tilt reveal">
+            <div class="work__visual work__visual--1">
+              <span class="work__mock" aria-hidden="true"></span>
+            </div>
+            <div class="work__info">
+              <h3>Cabinet d'architectes</h3>
+              <p>Site vitrine immersif — portfolio plein écran, prise de rendez-vous intégrée.</p>
+              <span class="work__result">+62% de demandes de devis en 3 mois</span>
+            </div>
+          </a>
+          <a href="#contact" class="work tilt reveal">
+            <div class="work__visual work__visual--2">
+              <span class="work__mock" aria-hidden="true"></span>
+            </div>
+            <div class="work__info">
+              <h3>Boutique artisanale</h3>
+              <p>E-commerce sur-mesure — fiches produits IA, paiement express, livraison suivie.</p>
+              <span class="work__result">Panier moyen +28% dès le premier mois</span>
+            </div>
+          </a>
+          <a href="#contact" class="work tilt reveal">
+            <div class="work__visual work__visual--3">
+              <span class="work__mock" aria-hidden="true"></span>
+            </div>
+            <div class="work__info">
+              <h3>Cabinet de conseil B2B</h3>
+              <p>Refonte complète + chatbot IA de qualification des prospects, connecté au CRM.</p>
+              <span class="work__result">2x plus de leads qualifiés, zéro appel perdu</span>
+            </div>
+          </a>
+        </div>
+        <p class="works__note reveal">Votre projet pourrait être le prochain. <a href="#contact">Parlons-en →</a></p>
+      </div>
+    </section>
+
+    <!-- ══════════════ 7. MÉTHODE ══════════════ -->
+    <section class="section" id="process">
+      <div class="container">
+        <p class="eyebrow reveal">La méthode</p>
+        <h2 class="section__title reveal">De l'idée au lancement en <em>4 étapes.</em> Sans jargon, sans surprise.</h2>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Appel découverte — 30 min</h3>
+            <p>On parle de vos clients, vos objectifs, votre budget. Vous repartez avec des recommandations concrètes, que l'on travaille ensemble ou non.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Maquette sous 72 h</h3>
+            <p>Grâce à l'IA, vous voyez votre futur site en 3 jours, pas en 3 semaines. On ajuste ensemble jusqu'à ce que ce soit exactement vous.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Développement accéléré</h3>
+            <p>Je code, l'IA accélère, vous suivez l'avancement en temps réel sur un lien privé. Chaque page est testée sur mobile, tablette et ordinateur.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Lancement + 30 jours de suivi</h3>
+            <p>Mise en ligne, formation vidéo pour tout gérer vous-même, et 30 jours d'ajustements inclus. Vous n'êtes jamais lâché dans la nature.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════ 8. TÉMOIGNAGES ══════════════ -->
+    <section class="section testimonials">
+      <div class="container">
+        <p class="eyebrow reveal">Ils en parlent mieux que moi</p>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>« Le site a été livré en 19 jours. Trois semaines plus tard, on recevait plus de demandes qu'en six mois avec l'ancien. »</p>
+            <footer><strong>Claire M.</strong> — Fondatrice, cabinet d'architecture</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>« J'avais peur du jargon technique. David explique tout simplement, et le chatbot IA répond à nos clients même le dimanche. »</p>
+            <footer><strong>Karim B.</strong> — Gérant, boutique artisanale</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>« Le seul prestataire qui m'ait parlé de mon chiffre d'affaires avant de me parler de technologie. »</p>
+            <footer><strong>Sophie L.</strong> — Directrice, cabinet de conseil</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 9. OFFRES ══════════════ -->
+    <section class="section" id="offres">
+      <div class="container">
+        <p class="eyebrow reveal">Investissement</p>
+        <h2 class="section__title reveal">Un prix fixe. <em>Zéro surprise.</em></h2>
+        <p class="section__lead reveal">Devis ferme avant tout engagement. Paiement en 2 ou 3 fois sans frais.</p>
+        <div class="pricing">
+          <article class="price-card reveal">
+            <h3>Essentiel</h3>
+            <p class="price-card__price">2 900 €</p>
+            <p class="price-card__desc">Pour lancer une présence pro, vite et bien.</p>
+            <ul>
+              <li>Site vitrine 4–5 pages sur-mesure</li>
+              <li>Design premium responsive</li>
+              <li>SEO de base + Google Business</li>
+              <li>Livré en 2 semaines</li>
+              <li>Formation vidéo incluse</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost magnetic">Démarrer</a>
+          </article>
+          <article class="price-card price-card--featured reveal">
+            <span class="price-card__badge">Le plus choisi</span>
+            <h3>Signature</h3>
+            <p class="price-card__price">5 900 €</p>
+            <p class="price-card__desc">Le site qui vous place au-dessus du lot.</p>
+            <ul>
+              <li>Tout Essentiel, plus :</li>
+              <li>Animations &amp; interactions sur-mesure</li>
+              <li>Chatbot IA entraîné sur votre activité</li>
+              <li>Blog + contenus SEO assistés par IA</li>
+              <li>30 jours d'ajustements inclus</li>
+              <li>Livré en 3 semaines</li>
+            </ul>
+            <a href="#contact" class="btn btn--primary magnetic">Réserver ma place</a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Sur-mesure</h3>
+            <p class="price-card__price">dès 9 500 €</p>
+            <p class="price-card__desc">E-commerce, portail client, automatisations.</p>
+            <ul>
+              <li>Cadrage complet de votre projet</li>
+              <li>Fonctionnalités métier sur-mesure</li>
+              <li>Intégrations (CRM, paiement, réservation)</li>
+              <li>Automatisations IA avancées</li>
+              <li>Accompagnement prioritaire</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost magnetic">Discuter du projet</a>
+          </article>
+        </div>
+        <p class="guarantee reveal">
+          <strong>Garantie sérénité :</strong> je retravaille le design jusqu'à votre validation.
+          Si la maquette ne vous plaît pas, vous ne payez que l'acompte — rien de plus.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════ 10. FAQ ══════════════ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <p class="eyebrow reveal">Questions fréquentes</p>
+        <h2 class="section__title reveal">Tout ce que vous vous demandez <em>avant d'appeler.</em></h2>
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary>Pourquoi l'IA ? Est-ce que mon site sera « générique » ?</summary>
+            <p>Non — c'est l'inverse. L'IA me fait gagner du temps sur le code répétitif et les contenus, que je réinvestis dans ce qui rend votre site unique : le design, la stratégie et vos textes. Chaque site est conçu sur-mesure, relu et validé par un humain : moi.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Combien de temps pour avoir mon site en ligne ?</summary>
+            <p>2 à 3 semaines pour un site vitrine, 4 à 6 pour un e-commerce ou un projet sur-mesure. Vous voyez une première maquette sous 72 h après notre appel de cadrage.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Je ne suis pas du tout technique. C'est un problème ?</summary>
+            <p>C'est même mon client préféré. Je m'occupe de tout — nom de domaine, hébergement, emails, mise en ligne — et je vous forme en vidéo pour que vous puissiez modifier vos textes et photos en autonomie.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Que se passe-t-il après la livraison ?</summary>
+            <p>30 jours d'ajustements sont inclus dans les offres Signature et Sur-mesure. Ensuite, vous êtes libre : gérer seul, ou me confier la maintenance à partir de 90 €/mois.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Et si le résultat ne me plaît pas ?</summary>
+            <p>Le design est validé par vous <em>avant</em> le développement, et je le retravaille jusqu'à votre accord. Si on n'y arrive pas à l'étape maquette, on s'arrête là et vous ne payez que l'acompte.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 11. CTA FINAL / CONTACT ══════════════ -->
+    <section class="section cta" id="contact">
+      <div class="cta__aurora" aria-hidden="true"></div>
+      <div class="container container--narrow">
+        <h2 class="cta__title reveal">Chaque semaine sans site performant,<br>ce sont des clients qui signent <em>ailleurs.</em></h2>
+        <p class="section__lead reveal">
+          Réservez votre appel découverte gratuit de 30 minutes.
+          Il reste <strong>2 places</strong> pour un démarrage ce trimestre.
+        </p>
+        <form class="contact-form reveal" id="contactForm" action="mailto:david@ribeiro-campelo.com" method="post" enctype="text/plain">
+          <div class="contact-form__row">
+            <label>
+              <span>Votre nom</span>
+              <input type="text" name="nom" placeholder="Marie Dupont" required>
+            </label>
+            <label>
+              <span>Votre email</span>
+              <input type="email" name="email" placeholder="marie@entreprise.fr" required>
+            </label>
+          </div>
+          <label>
+            <span>Votre projet en une phrase</span>
+            <textarea name="message" rows="3" placeholder="Ex. : refondre le site de mon cabinet et attirer plus de clients locaux." required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--large magnetic">
+            Réserver mon appel gratuit <span class="btn__arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="contact-form__note">Réponse sous 24 h ouvrées — promis, pas de spam, pas de relance agressive.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__logo">D<span class="accent">◆</span>R — Sites web premium propulsés par l'IA</p>
+      <nav class="footer__links" aria-label="Liens de pied de page">
+        <a href="mailto:david@ribeiro-campelo.com">david@ribeiro-campelo.com</a>
+        <a href="#top">Retour en haut ↑</a>
+      </nav>
+      <p class="footer__legal">© 2026 David Ribeiro. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
