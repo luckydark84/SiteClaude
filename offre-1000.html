@@ -210,6 +210,7 @@
           on s'appelle d'abord, et si l'offre ne vous convient pas, je vous le dirai moi-même.
         </p>
         <form class="contact-form reveal" id="reserveForm">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <div class="contact-form__row">
             <label>
               <span>Votre nom</span>
@@ -231,6 +232,7 @@
             Réponse sous 24 h ouvrées, appel sous 48 h. Aucun paiement avant notre échange.<br>
             Vous préférez l'email ? <a href="mailto:david@ribeiro-campelo.com">david@ribeiro-campelo.com</a>
           </p>
+          <p class="contact-form__rgpd">Vos données servent uniquement à vous répondre. Ni fichier client partagé, ni newsletter subie — <a href="mentions-legales.html">détails ici</a>.</p>
         </form>
       </div>
     </section>
@@ -251,6 +253,7 @@
       <nav class="footer__links" aria-label="Liens de pied de page">
         <a href="index.html">Toutes les offres</a>
         <a href="mailto:david@ribeiro-campelo.com">david@ribeiro-campelo.com</a>
+        <a href="mentions-legales.html">Mentions légales</a>
         <a href="#top">Retour en haut ↑</a>
       </nav>
       <p class="footer__legal">© 2026 David Ribeiro. Tous droits réservés.</p>
@@ -258,16 +261,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    document.getElementById("reserveForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const data = new FormData(e.target);
-      const subject = encodeURIComponent("Réservation offre 1 000 € — " + data.get("nom"));
-      const body = encodeURIComponent(
-        `Nom : ${data.get("nom")}\nEmail : ${data.get("email")}\n\nActivité :\n${data.get("message")}`
-      );
-      window.location.href = `mailto:david@ribeiro-campelo.com?subject=${subject}&body=${body}`;
-    });
-  </script>
 </body>
 </html>

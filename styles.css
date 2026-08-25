@@ -1010,6 +1010,53 @@ em {
   font-size: 0.85rem;
   color: var(--text-dim);
 }
+.contact-form__rgpd {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  opacity: 0.75;
+}
+.contact-form__rgpd a { color: var(--text-dim); }
+.form-status {
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 1.4em;
+  color: var(--text-dim);
+}
+.form-status--ok { color: #6ee7a0; font-weight: 600; }
+.form-status--error { color: #f0a3a3; }
+.form-status--error a { color: var(--accent); font-weight: 600; }
+
+/* ── Page mentions légales ───────────────────────── */
+.legal { padding-top: clamp(130px, 18vh, 180px); }
+.legal__updated {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+.legal h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 40px 0 14px;
+}
+.legal p, .legal li {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+.legal p { margin-bottom: 12px; }
+.legal ul { margin: 0 0 12px 22px; display: flex; flex-direction: column; gap: 8px; }
+.legal strong { color: var(--text); }
+.legal a { color: var(--accent); text-decoration: none; }
+.legal__todo {
+  color: #f0c27a;
+  background: rgba(240, 194, 122, 0.08);
+  border: 1px dashed rgba(240, 194, 122, 0.4);
+  border-radius: 6px;
+  padding: 1px 8px;
+}
+.legal__back { margin-top: 48px; }
 
 /* ── Footer ──────────────────────────────────────── */
 .footer {

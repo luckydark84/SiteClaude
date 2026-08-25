@@ -156,19 +156,59 @@ if (stickyCta) {
   }
 }
 
-/* ── Formulaire : ouvre le client mail avec un message pré-rempli.
-     Pour un vrai backend, remplacer par Formspree/Resend :
-     action="https://formspree.io/f/VOTRE_ID" method="POST" et
-     supprimer ce handler. ── */
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+/* ── Formulaires ──────────────────────────────────
+   Avec FORMSPREE_ENDPOINT renseigné (voir PERSONNALISATION.md),
+   l'envoi se fait en AJAX et le visiteur reste sur la page.
+   Sans endpoint, repli sur l'ouverture du client mail. ── */
+const FORMSPREE_ENDPOINT = ""; // ex : "https://formspree.io/f/abcdwxyz"
+const CONTACT_EMAIL = "david@ribeiro-campelo.com";
+
+function wireForm(id, subjectPrefix, messageLabel) {
+  const form = document.getElementById(id);
+  if (!form) return;
+
+  const status = document.createElement("p");
+  status.className = "form-status";
+  status.setAttribute("role", "status");
+  form.appendChild(status);
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const data = new FormData(e.target);
-    const subject = encodeURIComponent("Demande d'appel découverte — " + data.get("nom"));
-    const body = encodeURIComponent(
-      `Nom : ${data.get("nom")}\nEmail : ${data.get("email")}\n\nProjet :\n${data.get("message")}`
-    );
-    window.location.href = `mailto:david@ribeiro-campelo.com?subject=${subject}&body=${body}`;
+    const data = new FormData(form);
+    const subject = `${subjectPrefix} — ${data.get("nom")}`;
+
+    if (!FORMSPREE_ENDPOINT) {
+      const body = encodeURIComponent(
+        `Nom : ${data.get("nom")}\nEmail : ${data.get("email")}\n\n${messageLabel} :\n${data.get("message")}`
+      );
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+      return;
+    }
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    status.className = "form-status";
+    status.textContent = "Envoi en cours…";
+    data.append("_subject", subject);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      status.className = "form-status form-status--ok";
+      status.textContent = "Message bien reçu ! Je vous réponds sous 24 h ouvrées.";
+    } catch {
+      status.className = "form-status form-status--error";
+      status.innerHTML =
+        `L'envoi a échoué — écrivez-moi directement : <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>`;
+    } finally {
+      btn.disabled = false;
+    }
   });
 }
+
+wireForm("contactForm", "Demande d'appel découverte", "Projet");
+wireForm("reserveForm", "Réservation offre 1 000 €", "Activité");

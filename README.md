@@ -17,6 +17,12 @@ Compatible tel quel avec GitHub Pages, Vercel, Netlify ou Cloudflare Pages
 
 ## À personnaliser avant mise en ligne
 
+**Voir [PERSONNALISATION.md](PERSONNALISATION.md)** — le guide pas à pas :
+activation du formulaire (Formspree), champs des mentions légales, et la
+liste complète des contenus balisés `TODO-PERSO` dans le code.
+
+Résumé :
+
 - **Témoignages et résultats chiffrés** : les exemples fournis sont des
   placeholders — remplacez-les par de vrais retours clients avant publication.
 - **Portfolio** : remplacer les maquettes navigateur génériques par des captures
