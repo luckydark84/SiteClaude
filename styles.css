@@ -324,9 +324,14 @@ em {
   to { transform: translateX(-50%); }
 }
 
-/* ── Problème ────────────────────────────────────── */
-.problem { text-align: center; }
-.problem .section__lead { margin-inline: auto; }
+/* ── Problème & solution ─────────────────────────── */
+.problem, .solution { text-align: center; }
+.problem .section__lead, .solution .section__lead { margin-inline: auto; }
+.problem { padding-bottom: clamp(40px, 6vh, 70px); }
+.solution {
+  padding-top: clamp(40px, 6vh, 70px);
+  background: linear-gradient(180deg, transparent, rgba(110, 86, 207, 0.06));
+}
 
 /* ── Bento services ──────────────────────────────── */
 .bento {
